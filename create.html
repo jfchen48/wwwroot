@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Add a new batch</title>
+
+<script type="text/javascript">
+function item1() {
+	var selection = document.getElementById("category");
+
+	var catergories = ["Entertainment Electronics", "Furniture", "Appliances", "Toys", "Books", "Vehicles", "Tools", "Other"];
+	for(var i = 0; i < catergories.length; i++) {
+		var cat = catergories[i];
+		var el = document.createElement("option");
+		el.textContent = cat;
+		el.value = cat;
+		selection.appendChild(el);
+	}
+}
+
+function item2() {
+	var selection2 = document.getElementById("category2");
+
+	var catergories2 = ["Entertainment Electronics", "Furniture", "Appliances", "Toys", "Books", "Vehicles", "Tools", "Other"];
+	for(var i = 0; i < catergories2.length; i++) {
+		var cat2 = catergories2[i];
+		var el2 = document.createElement("option");
+		el2.textContent = cat2;
+		el2.value = cat2;
+		selection2.appendChild(el2);
+	}
+}
+</script>
+</head>
+
+<body onload="item1(); item2()">
+
+
+
+	
+<form name="createPackage" method="get" id="package" onsubmit="">
+	<fieldset id="Item1">
+		<legend>Item 1</legend>
+		<label for="Name">Name:</label><input type="text" name="Name1" id="Name1"/>
+		<label for="Description">Description:</label><textarea name="Description1" id="Description1"></textarea>
+		<label for "Category">Category:</label>
+		<select id="category" class="category">
+    <option>Choose a category</option>
+</select>
+	</fieldset>
+	<fieldset id="Item2">
+		<legend>Item 2</legend>
+		<label for="Name">Name:</label><input type="text" name="Name2" id="Name2"/>
+		<label for="Description">Description:</label><textarea name="Description2" id="Description2"></textarea>
+		<label for "Category">Category:</label>
+		<select id="category2" class="category">
+    <option>Choose a category</option>
+</select>
+	</fieldset>
+
+	<button name="create" id="create">Submit package</button>
+
+</form>
+
+</body>
+</html>
